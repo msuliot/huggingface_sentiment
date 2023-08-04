@@ -3,12 +3,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 hf_api_key = os.getenv('HUGGINGFACEHUB_API_TOKEN') # api key for huggingface.co in .env file
-
-
-def set_local_vars():
-    model_name = "nlptown/bert-base-multilingual-uncased-sentiment"
-    api_url = f"https://api-inference.huggingface.co/models/{model_name}"
-    return api_url
+model_name = os.getenv('MODEL_NAME') # model name for huggingface.co in .env file
+api_url = f"https://api-inference.huggingface.co/models/{model_name}"
 
 
 def hf_api(api_url, text):
@@ -25,10 +21,7 @@ def hf_api(api_url, text):
 
 
 def main():
-    api_url = set_local_vars()
-
     text = "I am very happy that you're watching this video."
-    
     return_value = hf_api(api_url, text)
     print(return_value)
 
