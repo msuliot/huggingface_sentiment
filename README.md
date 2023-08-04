@@ -46,3 +46,13 @@ This will download the model and tokenizer to your local machine and run on your
 Supported tensors are 
 - PyTorch 
 - TensorFlow
+
+## Hugging Face Hub API 
+https://huggingface.co/nlptown/bert-base-multilingual-uncased-sentiment
+- modelId: nlptown/bert-base-multilingual-uncased-sentiment
+- pipeline_tag: text-classification
+- library_name: transformers
+- architectures: BertForSequenceClassification
+- transformersInfo: auto_model: AutoModelForSequenceClassification
+- transformersInfo: pipeline_tag: text-classification
+- transformersInfo: processor: AutoTokenizer
